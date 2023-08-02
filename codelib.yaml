@@ -1,0 +1,23 @@
+- category: 基本配置
+  dir: config/
+  docs:
+    - title: 快速讀寫
+      fname: fastio.cpp
+      desc: '基於緩衝區的快速讀寫。'
+
+- category: 字符串
+  dir: string/
+  docs:
+    - title: Z 算法
+      fname: zfunc.cpp
+      desc: '/ $z_i$: 後綴與原串的 LCP。'
+
+    - title: Manacher
+      fname: manacher.cpp
+      desc: '$p_i$: $i$ 爲中心的最長迴文串長度。'
+    
+    - title: 迴文自動機
+      fname: pam.cpp
+      desc: |
+        / diff slink: 每個等差序列中需要單獨處理的後綴長度爲 len[slink]+diff。
+        / trans: 指向長度小於等於當前迴文串一半的後綴。
