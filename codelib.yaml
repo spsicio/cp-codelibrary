@@ -3,21 +3,145 @@
   docs:
     - title: 快速讀寫
       fname: fastio.cpp
-      desc: '基於緩衝區的快速讀寫。'
+      desc: null
+      
+    - title: Montogomery 乘法
+      fname: montgomery.cpp
+      desc: null
+
+    - title: 暫用 Treap 隨機數生成器
+      fname: rot-xor.cpp
+      desc: null
 
 - category: 字符串
   dir: string/
   docs:
     - title: Z 算法
-      fname: zfunc.cpp
-      desc: '/ $z_i$: 後綴與原串的 LCP。'
+      fname: z-func.cpp
+      desc: null
 
     - title: Manacher
       fname: manacher.cpp
-      desc: '$p_i$: $i$ 爲中心的最長迴文串長度。'
-    
+      desc: null
+
     - title: 迴文自動機
       fname: pam.cpp
       desc: |
-        / diff slink: 每個等差序列中需要單獨處理的後綴長度爲 len[slink]+diff。
-        / trans: 指向長度小於等於當前迴文串一半的後綴。
+        / slink: 指向沿着 fail 邊長度不等差的第一個後綴。
+        / trans: 指向長度小於等於當前迴文串一半的最長後綴。
+    
+    - title: 後綴自動機
+      fname: sam.cpp
+      desc: null
+
+    - title: Lyndon 分解
+      fname: lyndon.cpp
+      desc: |
+        / pms: 前綴的最小後綴。
+  # Plan to Add:
+  # [ ] Knuth Morris Pratt
+  # [ ] Aho Corasick AM
+  # [ ] Minimal String
+  # [ ] Suffix Array Review and Further Education
+  # [ ] Suffix AM Further Education
+
+- category: 圖論
+  dir: graph/
+  docs:
+    - title: 樹上啓發式合併
+      fname: dsu-on-tree.cpp
+      desc: null
+  # Plan to Add:
+  # [ ] Cut Vertex & Cut Edge
+  # [ ] SCC & v/e-BCC
+  # [ ] Block Forest Learning
+  # [ ] Network Flow and Further Education
+  # [ ] Tree Hashing
+  # [ ] MatrixTree            // Maybe
+  # [ ] Prufer                // Maybe
+  # [ ] Tree Divide & Tree
+  # [ ] Boruvka
+  # [ ] Kruskal & Prim Reconstruct
+  # [ ] Virtual Tree
+  # [ ] Dominator Tree
+
+- category: 數學
+  dir: math/
+  docs:
+    - title: 線性基
+      fname: linear-basis.cpp
+      desc: |
+        / qry_kth: 包括零，下標從零開始的第 k 大。只關注 k 的後 dim 位。
+        / qry_rnk: 返回小於 x 的向量個數（包括零），eq 表示能否表示出 x。
+        涉及刪除元素時可以考慮兩種方案：
+        - 記錄每個基的過期時間 exp。
+        - 記錄每個向量用基的表示方法。
+  # Plan to Add:
+  # [ ] Intersection of Linear Basis
+  # [ ] Min25
+  # [ ] FWT
+  # [ ] FFT / NTT
+  # [ ] Polynomial Learning
+  # [ ] du
+
+- category: 數據結構
+  dir: data-structures/
+  docs:
+    - title: 左偏堆
+      fname: leftist-heap.cpp
+      desc: 二路分治進行合併操作可實現線性建堆。
+
+    - title: 笛卡爾樹
+      fname: cartesian-tree.cpp
+      desc: null
+    
+    - title: FHQ Treap
+      fname: FHQ-Treap.cpp
+      desc: |
+        可持續化時只需要在 split 時複製結點。 \
+        ⚠️ 未測試 ⚠️
+
+    - title: Splay
+      fname: splay.cpp
+      desc: |
+        ⚠️ 未測試 ⚠️
+
+    - title: Link Cut Tree
+      fname: lct.cpp
+      desc: |
+        ⚠️ 未測試 ⚠️
+  # Plan to Add:
+  # [ ] Li Chao SegmentTree
+  # [ ] SegmentTree 
+  # [ ] KD Tree
+  # [ ] Block Array
+  # [ ] FHQ Treap Testing
+  # [ ] Splay Testing
+  # [ ] LCT Testing
+  # [ ] Weight Balanced Leafy Tree Learning
+
+# - category: 動態規劃
+#   dir: dynamic-programming/
+#   docs:
+#     - title: 斜率優化
+#       fname: null
+#       desc: null
+#   # Plan to Add:
+#   # [ ] opt/slope
+#   # [ ] opt/quadrangle
+
+# - category: 其他
+#   dir: others/
+#   docs:
+#     - title: 莫隊
+#       fname: mo.cpp
+#       desc: null
+
+#     - title: 珂朵莉樹
+#       fname: chtolly-tree.cpp
+#       desc: null
+#   # Plan to Add:
+#   # [ ] Mo's Algorithm
+#   # [ ] Chtolly Tree
+#   # [ ] CDQ Divide
+#   # [ ] n-dim particial order

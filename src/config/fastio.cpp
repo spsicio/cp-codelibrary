@@ -1,4 +1,4 @@
-struct FastIS{
+struct FastIS {
   static const int LEN = 1<<21|1;
   char buf[LEN], *l, *r, c, *t; bool neof, neg;
   FastIS() : l(buf), r(buf), neof(1) {}
@@ -17,13 +17,13 @@ struct FastIS{
     *t='\0'; return *this;
   }
   template<typename T> FastIS& operator>>(T &x) {
-    for (c=gc(); ~c and !isdigit(c); c=gc()) neg ^= (c=='-');
+    for (c=gc(); ~c and !isdigit(c); c=gc()) neg ^= c == '-';
     for (x=0; isdigit(c); c=gc()) x = 10*x+c-'0';
     if (neg) { x=-x, neg=0; } return *this;
   }
 } fast_in;
 
-struct FastOS{
+struct FastOS {
   static const int LEN=1<<21|1, W=21;
   char buf[LEN], *l, *r, *t, stk[W]; int top;
   FastOS() : l(buf), r(buf+LEN) {}

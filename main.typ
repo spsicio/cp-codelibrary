@@ -1,5 +1,5 @@
 #set page(width: 29.7cm, height: 21.0cm)
-#set text(font: "LXGW WenKai", size: 8pt)
+#set text(font: "LXGW WenKai", size: 11pt)
 #set heading(numbering: "1.1")
 #show heading.where(level: 1): it => block[
   #text(size: 16pt)[*#it*]
